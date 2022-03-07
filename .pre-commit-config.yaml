@@ -1,13 +1,9 @@
 repos:
-  - repo: local
-    hooks:
-      - id: extract-xml-from-pptx
-        name: Extract XML from .pptx
-        entry: .git/hooks/extract_xml_from_pptx.sh
-        language: script
-        pass_filenames: false
   - repo: https://github.com/lsst-ts/pre-commit-xmllint
     rev: v1.0.0
     hooks:
       - id: format-xmllint
-        files: .(xml|rels)$
+        files: .(pptx|xml|rels)$
+        entry: .git/hooks/extract_xml_from_pptx.sh
+        language: script
+        pass_filenames: false
