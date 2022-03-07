@@ -64,7 +64,10 @@
           <a:bodyPr/>
           <a:lstStyle/>
           <a:p>
-            <a:endParaRPr lang="en-US" dirty="0"/>
+            <a:r>
+              <a:rPr lang="en-US" dirty="0"/>
+              <a:t>Test</a:t>
+            </a:r>
           </a:p>
         </p:txBody>
       </p:sp>
