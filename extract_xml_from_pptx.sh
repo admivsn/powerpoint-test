@@ -1,6 +1,8 @@
 #!/bin/bash
 
-for file in *.pptx; do
-    rm -r “$file”
-    mkdir “${file::-5}”
-    unzip “$file” -d 
+for file_name in *.pptx; do
+    dir_name="${file_name::${#file_name}-5}"
+    rm -r "${dir_name}"
+    mkdir dir_name
+    unzip "$file_name" -d "${dir_name}"
+done
